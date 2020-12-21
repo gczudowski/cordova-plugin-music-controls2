@@ -233,7 +233,7 @@ public class MusicControlsNotification {
 			nbControls++;
 			Intent playIntent = new Intent("music-controls-play");
 			PendingIntent playPendingIntent = PendingIntent.getBroadcast(context, 1, playIntent, 0);
-			builder.addAction(this.getResourceId(infos.playIcon, android.R.drawable.ic_media_play), "", playPendingIntent);
+			builder.addAction(this.getResourceId(infos.playIcon, android.R.drawable.ic_media_play), "", resultPendingIntent);
 		}
 		/* Next */
 		if (infos.hasNext){
