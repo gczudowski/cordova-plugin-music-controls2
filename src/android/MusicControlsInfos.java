@@ -12,6 +12,7 @@ public class MusicControlsInfos{
 	public String cover;
 	public boolean isPlaying;
 	public boolean hasPrev;
+	public boolean hasPlayPause;
 	public boolean hasNext;
 	public boolean hasClose;
 	public boolean dismissable;
@@ -24,14 +25,15 @@ public class MusicControlsInfos{
 
 	public MusicControlsInfos(JSONArray args) throws JSONException {
 		final JSONObject params = args.getJSONObject(0);
-		
+
 		this.track = params.getString("track");
 		this.artist = params.getString("artist");
-    		this.album = params.getString("album");
+        this.album = params.getString("album");
 		this.ticker = params.getString("ticker");
 		this.cover = params.getString("cover");
 		this.isPlaying = params.getBoolean("isPlaying");
 		this.hasPrev = params.getBoolean("hasPrev");
+		this.hasPlayPause = params.getBoolean("hasPlayPause");
 		this.hasNext = params.getBoolean("hasNext");
 		this.hasClose = params.getBoolean("hasClose");
 		this.dismissable = params.getBoolean("dismissable");
